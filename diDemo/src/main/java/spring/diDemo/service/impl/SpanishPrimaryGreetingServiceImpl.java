@@ -7,10 +7,10 @@ import spring.diDemo.service.GreetingService;
 
 @Service
 @Primary
-@Profile({"en","default"})
-public class PrimaryGreetingServiceImpl implements GreetingService {
+@Profile("es")
+public class SpanishPrimaryGreetingServiceImpl implements GreetingService {
     @Override
     public String sayGreeting() {
-        return "Hello - I was injected via Primary!!";
+        return "Hola - Me inyectaron a través de Primary";
     }
 }
