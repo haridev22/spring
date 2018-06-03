@@ -8,6 +8,7 @@ import spring.diDemo.controller.MyController;
 import spring.diDemo.controller.PropertyInjectedController;
 import spring.diDemo.controller.SetterInjectedController;
 import spring.diDemo.exampleBeans.FakeDataSource;
+import spring.diDemo.exampleBeans.FakeJmsBroker;
 
 @SpringBootApplication
 public class DiDemoApplication {
@@ -20,6 +21,10 @@ public class DiDemoApplication {
 		FakeDataSource fakeDataSource = (FakeDataSource)ctx.getBean(FakeDataSource.class);
 
 		System.out.println(fakeDataSource.toString());
+
+		FakeJmsBroker fakeJmsBroker = (FakeJmsBroker) ctx.getBean(FakeJmsBroker.class);
+
+		System.out.println(fakeJmsBroker);
 
 	}
 }
